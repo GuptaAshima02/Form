@@ -26,7 +26,7 @@ const Home = ({ contacts, deleteContact }) => {
               </tr>
               <tr>
                 <td>
-                  <button onClick={() => deleteContact(index)}>Delete</button>
+                  <button className="del" onClick={() => deleteContact(index)}>Delete</button>
                 </td>
               </tr>
             </tbody>
