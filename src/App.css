@@ -59,4 +59,29 @@
   border: none;
   margin-top: 15px;
   margin-left: 50px;
+  text-decoration: none;
+  background-color: aliceblue;
+  visibility: hidden;
+
+}
+/* .del {
+  visibility: hidden;
+} */
+
+.outputfield:hover .del {
+  visibility: visible;
+}
+.ename,
+.ephone,
+.eemail {
+  color: red;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-left: 17%;
+}
+
+.input:focus + .ename,
+.input:focus + .ephone,
+.input:focus + .eemail {
+  display: none;
 }

@@ -1,5 +1,5 @@
-import { useState } from "react";
 import React from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 const Home = ({ contacts, deleteContact }) => {
@@ -27,6 +27,7 @@ const Home = ({ contacts, deleteContact }) => {
               <tr>
                 <td>
                   <button className="del" onClick={() => deleteContact(index)}>Delete</button>
+                  <Link className="del" to={`/edit/${index}`} >Edit</Link>
                 </td>
               </tr>
             </tbody>
@@ -38,4 +39,3 @@ const Home = ({ contacts, deleteContact }) => {
 };
 
 export default Home;
-

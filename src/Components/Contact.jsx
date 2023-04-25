@@ -47,10 +47,6 @@ const Contact = ({ addContact }) => {
       <div className="App">
         <form className="form" onSubmit={handleSubmit}>
           <div className="container">
-            <table className="inputf">
-              <tbody>
-                <tr>
-                  <td>
                     <label>
                       Enter Name &nbsp; &nbsp; &nbsp; &nbsp;
                       <input
@@ -62,16 +58,10 @@ const Contact = ({ addContact }) => {
                         onChange={(e) => setName(e.target.value)}
                       />
                     </label>
-                  </td>
-                  <td>
                     <div className="ename" id="ename">
                       {nameError}
                     </div>
-                  </td>
-                </tr>
                 <br />
-                <tr>
-                  <td>
                     <label>
                       Enter Phone &nbsp; &nbsp; &nbsp; &nbsp;
                       <input
@@ -83,16 +73,10 @@ const Contact = ({ addContact }) => {
                         onChange={(e) => setPhone(e.target.value)}
                       />
                     </label>
-                  </td>
-                  <td>
                     <div className="ephone" id="ephone">
                       {phoneError}
                     </div>
-                  </td>
-                </tr>
                 <br />
-                <tr>
-                  <td>
                     <label>
                       Enter Email &nbsp; &nbsp; &nbsp; &nbsp;
                       <input
@@ -104,16 +88,10 @@ const Contact = ({ addContact }) => {
                         onChange={(e) => setEmail(e.target.value)}
                       />
                     </label>
-                  </td>
-                  <td>
                     <div className="eemail" id="eemail">
                       {emailError}
                     </div>
-                  </td>
-                </tr>
                 <br />
-              </tbody>
-            </table>
             <button type="submit" className="btn">
               Submit
             </button>
