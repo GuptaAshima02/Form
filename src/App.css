@@ -9,12 +9,14 @@
 .input{
   border-color: aqua;
   font-size: 15px;
+  margin-bottom: 10px;
 }
 .btn{
   margin-top: 40px;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   margin-left: 13%;
+  
 }
 .btn:hover{
   background-color: rgb(192, 240, 240);

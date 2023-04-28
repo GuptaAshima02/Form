@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect} from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./Components/Home";
 import Contact from "./Components/Contact";
@@ -6,7 +6,10 @@ import EditContact from "./Components/EditContact.jsx";
 import "./App.css";
 
 function App() {
-  const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState(() => {
+    const localData = localStorage.getItem("contacts");
+    return localData ? JSON.parse(localData) : [];
+  });
 
   const addContact = (contact) => {
     setContacts([...contacts, contact]);
@@ -23,6 +26,11 @@ function App() {
     newContacts[index] = updatedContact;
     setContacts(newContacts);
   };
+
+  useEffect(() => {
+    localStorage.setItem("contacts", JSON.stringify(contacts));
+  }, [contacts]);
+  
 
   return (
     <>
